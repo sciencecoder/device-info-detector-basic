@@ -3,9 +3,8 @@
 //window.navigator.oscpu
 var express = require('express');
 //This uses Router because it lives on nodejs-demos shared server
-var app = express().Router();
-//app.listen(process.env.PORT || 3000, process.env.IP);
-//app.listen(3000)
+var app=express();
+
 var obj = {};
 app.get('/api/userdata', function(req, res) {
   
@@ -20,3 +19,8 @@ app.get('/api/userdata', function(req, res) {
 
   res.send(JSON.stringify(obj));
 });
+//app.listen(process.env.PORT || 3000, process.env.IP);
+//app.listen(3000)
+console.log("programm.js is running");
+module.exports = app;
+
